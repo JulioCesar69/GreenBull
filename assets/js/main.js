@@ -85,9 +85,11 @@
         selectHeader.classList.add('header-scrolled')
         if (selectTopbar) {
           selectTopbar.classList.add('topbar-scrolled')
+          document.getElementById("logo").src="assets/img/logo-transition.png";
         }
       } else {
         selectHeader.classList.remove('header-scrolled')
+        document.getElementById("logo").src="assets/img/logo.png";
         if (selectTopbar) {
           selectTopbar.classList.remove('topbar-scrolled')
         }
@@ -105,6 +107,7 @@
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         backtotop.classList.add('active')
+        
       } else {
         backtotop.classList.remove('active')
       }
