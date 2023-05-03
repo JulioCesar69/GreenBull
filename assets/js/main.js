@@ -175,7 +175,7 @@
   }
 
   /**
-   * Menu isotope and filter
+   * Menu isotope and filter coctail
    */
   window.addEventListener('load', () => {
     let menuContainer = select('.menu-container');
@@ -193,6 +193,68 @@
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
+
+        menuIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        menuIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  });
+
+  /**
+   * Menu isotope and filter coffee
+   */
+  window.addEventListener('load', () => {
+    let menuContainer = select('.menu-container-coffe');
+    if (menuContainer) {
+      let menuIsotope = new Isotope(menuContainer, {
+        itemSelector: '.menu-item-coffe',
+        layoutMode: 'fitRows'
+      });
+
+      let menuFilters = select('#menu-flters-coffe li', true);
+
+      on('click', '#menu-flters-coffe li', function(e) {
+        e.preventDefault();
+        menuFilters.forEach(function(el) {
+          el.classList.remove('filter-active-coffe');
+        });
+        this.classList.add('filter-active-coffe');
+
+        menuIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        menuIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  });
+
+  /**
+   * Menu isotope and filter snacks
+   */
+  window.addEventListener('load', () => {
+    let menuContainer = select('.menu-container-snacks');
+    if (menuContainer) {
+      let menuIsotope = new Isotope(menuContainer, {
+        itemSelector: '.menu-item-snacks',
+        layoutMode: 'fitRows'
+      });
+
+      let menuFilters = select('#menu-flters-snacks li', true);
+
+      on('click', '#menu-flters-snacks li', function(e) {
+        e.preventDefault();
+        menuFilters.forEach(function(el) {
+          el.classList.remove('filter-active-snacks');
+        });
+        this.classList.add('filter-active-snacks');
 
         menuIsotope.arrange({
           filter: this.getAttribute('data-filter')
