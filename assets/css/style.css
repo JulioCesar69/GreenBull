@@ -1011,7 +1011,7 @@ section {
   justify-content: space-between;
   position: relative;
 }
-.menu .menu-content p{
+.menu .menu-content .present{
   border-bottom:3px solid #009E55;
   margin-bottom: 0;
 }
@@ -1027,7 +1027,7 @@ margin-left: auto;
   border-bottom:3px solid #009E55;
   }
 
-.menu .menu-content a {
+.menu .menu-content p {
   padding-right: 10px;
   position: relative;
   z-index: 3;
@@ -1036,7 +1036,7 @@ margin-left: auto;
   transition: 0.3s;
 }
 
-.menu .menu-content a:hover {
+.menu .menu-content p:hover {
   color: #009E55;
 }
 
