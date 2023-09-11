@@ -173,8 +173,6 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #009E55;
-  border-bottom: 1px solid rgba(12, 11, 9, 0.6);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
@@ -215,13 +213,12 @@ h1, h2, h3, h4, h5, h6 {
 # Book a table button Menu
 --------------------------------------------------------------*/
 .book-a-table-btn {
-  margin: 0 0 0 15px;
-  border: 2px solid;
   color: #fff;
+  margin: 0 0 0 15px;
   border-radius: 50px;
   padding: 8px 25px;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
   transition: 0.3s;
@@ -446,10 +443,25 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+#background-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;  
+  opacity: 0.2;
+}
+
+#video-eventos{
+  max-width: 100%;
+  position: relative;
+}
+
+
 #hero {
   width: 100%;
-  height: 100vh;
-  background: url("../img/A2.png") top center;
+  height: 100vh;  
   background-size: cover;
   position: relative;
   padding: 0;
@@ -457,7 +469,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1064,7 +1076,6 @@ margin-left: auto;
 # Events
 --------------------------------------------------------------*/
 .events {
-  background: url(../img/events-bg.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
 }
